@@ -12,7 +12,8 @@
 		AE8E18A62778036B000C1D8C /* OSStatus+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18A52778036B000C1D8C /* OSStatus+Error.swift */; };
 		AE8E18B7277812F6000C1D8C /* CharacterSet+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18B6277812F6000C1D8C /* CharacterSet+Utility.swift */; };
 		AE8E18BC2778216E000C1D8C /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18BB2778216E000C1D8C /* UserInterface.swift */; };
-		AE8E18C027782295000C1D8C /* UI+PasswordGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18BF27782295000C1D8C /* UI+PasswordGeneration.swift */; };
+		AE8E18C027782295000C1D8C /* PassGenUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18BF27782295000C1D8C /* PassGenUI.swift */; };
+		AE8E18C427784C3D000C1D8C /* ApplicationUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18C327784C3D000C1D8C /* ApplicationUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,7 +35,8 @@
 		AE8E18A52778036B000C1D8C /* OSStatus+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSStatus+Error.swift"; sourceTree = "<group>"; };
 		AE8E18B6277812F6000C1D8C /* CharacterSet+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Utility.swift"; sourceTree = "<group>"; };
 		AE8E18BB2778216E000C1D8C /* UserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
-		AE8E18BF27782295000C1D8C /* UI+PasswordGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+PasswordGeneration.swift"; sourceTree = "<group>"; };
+		AE8E18BF27782295000C1D8C /* PassGenUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassGenUI.swift; sourceTree = "<group>"; };
+		AE8E18C327784C3D000C1D8C /* ApplicationUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				AE8E18BB2778216E000C1D8C /* UserInterface.swift */,
-				AE8E18BF27782295000C1D8C /* UI+PasswordGeneration.swift */,
+				AE8E18BF27782295000C1D8C /* PassGenUI.swift */,
+				AE8E18C327784C3D000C1D8C /* ApplicationUI.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -159,7 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE8E18C027782295000C1D8C /* UI+PasswordGeneration.swift in Sources */,
+				AE8E18C427784C3D000C1D8C /* ApplicationUI.swift in Sources */,
+				AE8E18C027782295000C1D8C /* PassGenUI.swift in Sources */,
 				AE8E18A62778036B000C1D8C /* OSStatus+Error.swift in Sources */,
 				AE8E18B7277812F6000C1D8C /* CharacterSet+Utility.swift in Sources */,
 				AE8E18A32777F43B000C1D8C /* PasswordGenerator.swift in Sources */,

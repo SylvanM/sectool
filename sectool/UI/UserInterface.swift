@@ -15,29 +15,43 @@ class UserInterface {
      */
     static func run(arguments: [String]) throws {
         
-        guard arguments.count >= 2 else {
+        guard CommandLine.argc >= 2 else {
             throw SecToolGeneralError(.invalidOperationError)
         }
         
-        guard let operation = SecToolOperation(rawValue: arguments[1]) else {
-            throw SecToolGeneralError(.invalidOperationError, message: "Sorry, \(arguments[1]) is not a valid sectool operation.")
+        guard let operation = SecToolOperation(rawValue: CommandLine.arguments[1]) else {
+            throw SecToolGeneralError(.invalidOperationError, message: "Sorry, \(CommandLine.arguments[1]) is not a valid sectool operation.")
         }
         
-        switch operation {
-        case .passwordGeneration:
-            try runPasswordGeneration(arguments: Array(arguments[2...]))
+        let toolArguments = Array(CommandLine.arguments[2...])
+        
+        let toolUI = getUI(for: operation)
+        
+        do {
+            try toolUI.run(withArguments: toolArguments)
+        } catch {
+            // TODO: Print an error message, and print the usage
+            toolUI.printUsage()
         }
         
     }
     
-    
+    /**
+     * Returns the UI class for the particular operation of sectool
+     */
+    static func getUI(for tool: SecToolOperation) -> ApplicationUI {
+        switch tool {
+        case .passwordGeneration:
+            return PasswordGenerationUI()
+        }
+    }
     
     // MARK: Enumerations
     
     /**
      * An operation that can be performed by `sectool`, with the string used by the user to call it
      */
-    enum SecToolOperation: String {
+    enum SecToolOperation: String, CaseIterable {
         case passwordGeneration = "genpass"
     }
     

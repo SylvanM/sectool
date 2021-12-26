@@ -67,7 +67,7 @@ class PasswordGenerator {
      * - Returns: A random string
      */
 #warning("This uses insecure ways of converting the bytes to characters in a string")
-    func generatePassword(ofLength length: Int = 12) throws -> String {
+    func generatePassword(ofLength length: Int = 16) throws -> String {
         
         // We have some random data, now convert that to a valid string
         

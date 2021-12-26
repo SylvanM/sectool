@@ -1,5 +1,5 @@
 //
-//  UI+PasswordGeneration.swift
+//  PassGenUI.swift
 //  sectool
 //
 //  Created by Sylvan Martin on 12/25/21.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-extension UserInterface {
+class PasswordGenerationUI: ApplicationUI {
     
-    /**
-     * Runs the password generation operation
-     */
-    static func runPasswordGeneration(arguments: [String]) throws {
-        
+    func printUsage() {
+        // TODO: Actually write this
+    }
+    
+    func run(withArguments arguments: [String]) throws {
         // TODO: Maybe actually parse the input
         
         let passwordGenerator = PasswordGenerator()
@@ -21,7 +21,6 @@ extension UserInterface {
         let password = try passwordGenerator.generatePassword()
         
         print(password)
-        
     }
     
 }
