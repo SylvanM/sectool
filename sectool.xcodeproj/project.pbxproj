@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		AE8E189C2777F3F1000C1D8C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E189B2777F3F1000C1D8C /* main.swift */; };
 		AE8E18A32777F43B000C1D8C /* PasswordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18A22777F43B000C1D8C /* PasswordGenerator.swift */; };
+		AE8E18A62778036B000C1D8C /* OSStatus+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18A52778036B000C1D8C /* OSStatus+Error.swift */; };
+		AE8E18B7277812F6000C1D8C /* CharacterSet+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18B6277812F6000C1D8C /* CharacterSet+Utility.swift */; };
+		AE8E18BC2778216E000C1D8C /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18BB2778216E000C1D8C /* UserInterface.swift */; };
+		AE8E18C027782295000C1D8C /* UI+PasswordGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18BF27782295000C1D8C /* UI+PasswordGeneration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +31,10 @@
 		AE8E18982777F3F1000C1D8C /* sectool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = sectool; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8E189B2777F3F1000C1D8C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AE8E18A22777F43B000C1D8C /* PasswordGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGenerator.swift; sourceTree = "<group>"; };
+		AE8E18A52778036B000C1D8C /* OSStatus+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSStatus+Error.swift"; sourceTree = "<group>"; };
+		AE8E18B6277812F6000C1D8C /* CharacterSet+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Utility.swift"; sourceTree = "<group>"; };
+		AE8E18BB2778216E000C1D8C /* UserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
+		AE8E18BF27782295000C1D8C /* UI+PasswordGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+PasswordGeneration.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +68,37 @@
 			isa = PBXGroup;
 			children = (
 				AE8E189B2777F3F1000C1D8C /* main.swift */,
-				AE8E18A22777F43B000C1D8C /* PasswordGenerator.swift */,
+				AE8E18B827781F16000C1D8C /* UI */,
+				AE8E18A42778035C000C1D8C /* Utility */,
+				AE8E18A727781074000C1D8C /* Password Generation */,
 			);
 			path = sectool;
+			sourceTree = "<group>";
+		};
+		AE8E18A42778035C000C1D8C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				AE8E18A52778036B000C1D8C /* OSStatus+Error.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		AE8E18A727781074000C1D8C /* Password Generation */ = {
+			isa = PBXGroup;
+			children = (
+				AE8E18A22777F43B000C1D8C /* PasswordGenerator.swift */,
+				AE8E18B6277812F6000C1D8C /* CharacterSet+Utility.swift */,
+			);
+			path = "Password Generation";
+			sourceTree = "<group>";
+		};
+		AE8E18B827781F16000C1D8C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AE8E18BB2778216E000C1D8C /* UserInterface.swift */,
+				AE8E18BF27782295000C1D8C /* UI+PasswordGeneration.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8E18C027782295000C1D8C /* UI+PasswordGeneration.swift in Sources */,
+				AE8E18A62778036B000C1D8C /* OSStatus+Error.swift in Sources */,
+				AE8E18B7277812F6000C1D8C /* CharacterSet+Utility.swift in Sources */,
 				AE8E18A32777F43B000C1D8C /* PasswordGenerator.swift in Sources */,
 				AE8E189C2777F3F1000C1D8C /* main.swift in Sources */,
+				AE8E18BC2778216E000C1D8C /* UserInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
