@@ -20,6 +20,6 @@ protocol ApplicationUI {
     /**
      * Runs this specific tool
      */
-    func run(withArguments arguments: [String]) throws
+    func run() throws
     
 }

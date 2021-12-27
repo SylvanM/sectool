@@ -14,6 +14,7 @@
 		AE8E18BC2778216E000C1D8C /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18BB2778216E000C1D8C /* UserInterface.swift */; };
 		AE8E18C027782295000C1D8C /* PassGenUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18BF27782295000C1D8C /* PassGenUI.swift */; };
 		AE8E18C427784C3D000C1D8C /* ApplicationUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E18C327784C3D000C1D8C /* ApplicationUI.swift */; };
+		AEA0EC0F277943D000458785 /* ArgumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0EC0E277943D000458785 /* ArgumentParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		AE8E18BB2778216E000C1D8C /* UserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
 		AE8E18BF27782295000C1D8C /* PassGenUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassGenUI.swift; sourceTree = "<group>"; };
 		AE8E18C327784C3D000C1D8C /* ApplicationUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationUI.swift; sourceTree = "<group>"; };
+		AEA0EC0E277943D000458785 /* ArgumentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				AE8E18BB2778216E000C1D8C /* UserInterface.swift */,
 				AE8E18BF27782295000C1D8C /* PassGenUI.swift */,
 				AE8E18C327784C3D000C1D8C /* ApplicationUI.swift */,
+				AEA0EC0E277943D000458785 /* ArgumentParser.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				AE8E18A32777F43B000C1D8C /* PasswordGenerator.swift in Sources */,
 				AE8E189C2777F3F1000C1D8C /* main.swift in Sources */,
 				AE8E18BC2778216E000C1D8C /* UserInterface.swift in Sources */,
+				AEA0EC0F277943D000458785 /* ArgumentParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +300,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JDSTZ7K2MV;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INSTALL_PATH = /usr/local/sylvanm/bin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -307,6 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JDSTZ7K2MV;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INSTALL_PATH = /usr/local/sylvanm/bin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

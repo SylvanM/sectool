@@ -13,37 +13,24 @@ class UserInterface {
     /**
      * Transfers control of the program to the appropriate `sectool` operation
      */
-    static func run(arguments: [String]) throws {
+    static func run() throws {
         
-        guard CommandLine.argc >= 2 else {
-            throw SecToolGeneralError(.invalidOperationError)
-        }
-        
-        guard let operation = SecToolOperation(rawValue: CommandLine.arguments[1]) else {
-            throw SecToolGeneralError(.invalidOperationError, message: "Sorry, \(CommandLine.arguments[1]) is not a valid sectool operation.")
-        }
-        
-        let toolArguments = Array(CommandLine.arguments[2...])
-        
-        let toolUI = getUI(for: operation)
+        let toolUI = try ArgumentParser.getOperationInterface()
         
         do {
-            try toolUI.run(withArguments: toolArguments)
+            try toolUI.run()
         } catch {
-            // TODO: Print an error message, and print the usage
+            
+            if error is SecToolGeneralError {
+                throw error
+            }
+            
+            // TODO: Do tool specific error handling
+            
             toolUI.printUsage()
+            
         }
         
-    }
-    
-    /**
-     * Returns the UI class for the particular operation of sectool
-     */
-    static func getUI(for tool: SecToolOperation) -> ApplicationUI {
-        switch tool {
-        case .passwordGeneration:
-            return PasswordGenerationUI()
-        }
     }
     
     // MARK: Enumerations

@@ -27,32 +27,17 @@ class PasswordGenerator {
      *
      * I literally just went along each row of my keyboard to type this
      */
-    public static let defaultCharacterSet = CharacterSet(charactersIn: "~!@#$%^&*()_+`1234567890-=QWERTYUIOP{}|qwertyuiop[]\\ASDFGHJKL:\"asdfghjkl;'ZXCVBNM<>?zxcvbnm,./")
+    public static let defaultCharacterSet = CharacterSet(charactersIn: "~!@#$%^&*()_+`1234567890-=QWERTYUIOP{}|qwertyuiop[]\\ASDFGHJKL:\"asdfghjkl;'ZXCVBNM<>?zxcvbnm,./ ")
+    
+    public static let defaultPasswordLength = 16
     
     // MARK: - Initializers
     
     /**
      * Creates a `PasswordGenerator` that generates characters from an allowable character set
      */
-    init(allowing allowedCharacters: CharacterSet = defaultCharacterSet, excluding excludedCharacters: CharacterSet? = nil) {
-        
-        var characterSet = allowedCharacters
-        
-        if let excludedSet = excludedCharacters {
-            characterSet.subtract(excludedSet)
-        }
-        
-        self.allowableCharacterSet = characterSet
-        
-    }
-    
-    /**
-     * A `PasswordGenerator` that uses only alphanumeric characters
-     *
-     * - Parameter except: The `CharacterSet` odf characters to exclude
-     */
-    class func alphanumeric(except excludedChars: CharacterSet = .empty) -> PasswordGenerator {
-        PasswordGenerator(allowing: .alphanumerics, excluding: excludedChars)
+    init(allowing allowedCharacters: CharacterSet = defaultCharacterSet) {
+        self.allowableCharacterSet = allowedCharacters
     }
     
     // MARK: - Methods
@@ -66,15 +51,14 @@ class PasswordGenerator {
      *
      * - Returns: A random string
      */
-#warning("This uses insecure ways of converting the bytes to characters in a string")
-    func generatePassword(ofLength length: Int = 16) throws -> String {
+    func generatePassword(ofLength length: Int = defaultPasswordLength) throws -> String {
         
         // We have some random data, now convert that to a valid string
         
         // TODO: Make this actually secure
         
         // keep generating random characters until
-        // yeah I know this is bad. Whatever.
+        // This feels very unelegant, but apparently it's called rejection sampling and it's cool
         
         var characters = [Character](repeating: "0", count: length)
         

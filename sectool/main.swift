@@ -8,7 +8,7 @@
 import Foundation
 
 do {
-    try UserInterface.run(arguments: CommandLine.arguments)
+    try UserInterface.run()
 } catch {
 
     if let generalError = error as? UserInterface.SecToolGeneralError {
